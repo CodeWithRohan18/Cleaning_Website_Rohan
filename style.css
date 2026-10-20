@@ -1,0 +1,636 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+#services-top,
+#additional-services,
+#contact {
+    scroll-margin-top: 120px;
+}
+
+body {
+    font-family: Arial, Verdana, sans-serif;
+    background-color: #e9f3ff;
+    color: #1e293b;
+    line-height: 1.7;
+}
+
+/* ---------- HEADER ---------- */
+
+header {
+    background-color: #14213d;
+    padding: 14px 7%;
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+
+    box-shadow: 0 3px 12px rgba(0,0,0,0.16);
+}
+
+.logo img {
+    height: 70px;
+    width: auto;
+}
+
+nav a {
+    color: white;
+    text-decoration: none;
+
+    margin-left: 28px;
+
+    font-size: 16px;
+    font-weight: bold;
+
+    transition: 0.3s;
+}
+
+nav a:hover {
+    color: #38bdf8;
+}
+
+.menu-btn {
+    display: none;
+
+    background: white;
+    color: #14213d;
+
+    border: none;
+
+    padding: 8px 12px;
+
+    border-radius: 6px;
+
+    font-size: 22px;
+
+    cursor: pointer;
+}
+
+/* ---------- HERO SECTION ---------- */
+
+.hero {
+    min-height: 650px;
+
+    background:
+    linear-gradient(rgba(10,20,40,0.78), rgba(10,20,40,0.65)),
+    url("hero.png");
+
+    background-size: cover;
+    background-position: center;
+
+    display: flex;
+    align-items: center;
+
+    padding: 80px 7%;
+}
+
+.hero-text {
+    max-width: 720px;
+    color: white;
+}
+
+.tagline {
+    background-color: rgba(255,255,255,0.15);
+
+    padding: 10px 18px;
+
+    border-radius: 30px;
+
+    display: inline-block;
+
+    margin-bottom: 20px;
+
+    font-size: 14px;
+
+    letter-spacing: 1px;
+}
+
+.hero h1 {
+    font-size: 58px;
+
+    line-height: 1.1;
+
+    margin-bottom: 25px;
+}
+
+.hero p {
+    font-size: 18px;
+
+    margin-bottom: 30px;
+
+    color: #dbeafe;
+}
+
+.btn {
+    display: inline-block;
+
+    background-color: #0ea5e9;
+
+    color: white;
+
+    padding: 14px 28px;
+
+    border-radius: 30px;
+
+    text-decoration: none;
+
+    font-weight: bold;
+
+    border: none;
+
+    cursor: pointer;
+
+    transition: 0.3s;
+}
+
+.btn:hover {
+    background-color: #0284c7;
+
+    transform: translateY(-2px);
+}
+
+/* ---------- SECTIONS ---------- */
+
+.about,
+.features,
+.trust-section,
+.faq-section,
+.extra-services,
+.service-info,
+.form-section,
+.page-title,
+.client-section,
+.contact-section,
+.reviews-section {
+    padding: 80px 7%;
+}
+
+.about h2,
+.features h2,
+.trust-section h2,
+.faq-section h2,
+.extra-services h2,
+.service-info h2,
+.page-title h1,
+.client-section h2,
+.contact-section h2,
+.reviews-section h2 {
+    text-align: center;
+
+    margin-bottom: 40px;
+
+    color: #14213d;
+
+    font-size: 38px;
+}
+
+.page-title {
+    background-color: #dbeafe;
+
+    text-align: center;
+}
+
+.page-title p,
+.section-intro {
+    max-width: 760px;
+
+    margin: auto;
+
+    color: #475569;
+
+    text-align: center;
+}
+
+/* ---------- ABOUT ---------- */
+
+.about-container {
+    display: flex;
+
+    align-items: center;
+
+    gap: 40px;
+
+    background: white;
+
+    padding: 35px;
+
+    border-radius: 20px;
+
+    border: 1px solid #dbeafe;
+
+    box-shadow: 0 5px 20px rgba(0,0,0,0.08);
+}
+
+.about-container img {
+    width: 45%;
+
+    height: 360px;
+
+    object-fit: cover;
+
+    border-radius: 18px;
+}
+
+.about-text {
+    flex: 1;
+}
+
+.about-text p {
+    margin-bottom: 18px;
+
+    color: #475569;
+}
+
+/* ---------- GRID ---------- */
+
+.feature-grid,
+.service-grid,
+.process-grid,
+.info-container,
+.client-grid,
+.review-grid {
+    display: grid;
+
+    grid-template-columns: repeat(3, 1fr);
+
+    gap: 28px;
+}
+
+/* ---------- CARDS ---------- */
+
+.feature-card,
+.service-card,
+.process-card,
+.info-container div,
+.faq-box,
+.contact-card,
+.client-card,
+.review-card {
+    background: white;
+
+    padding: 28px;
+
+    border-radius: 18px;
+
+    border: 1px solid #dbeafe;
+
+    box-shadow: 0 4px 18px rgba(0,0,0,0.07);
+
+    transition: 0.3s;
+}
+
+.feature-card:hover,
+.service-card:hover,
+.process-card:hover,
+.info-container div:hover,
+.client-card:hover,
+.contact-card:hover,
+.review-card:hover {
+    transform: translateY(-5px);
+}
+
+.feature-card h3,
+.service-card h3,
+.process-card h3,
+.info-container h3,
+.faq-box h3,
+.contact-card h3,
+.client-card h3,
+.review-card h3 {
+    color: #14213d;
+
+    margin-bottom: 14px;
+
+    font-size: 22px;
+}
+
+.feature-card p,
+.service-card p,
+.process-card p,
+.info-container p,
+.faq-box p,
+.contact-card p,
+.client-card p,
+.review-card p {
+    color: #475569;
+}
+
+/* ---------- IMAGES ---------- */
+
+.service-card img,
+.client-card img {
+    width: 100%;
+
+    height: 220px;
+
+    object-fit: cover;
+
+    border-radius: 12px;
+
+    margin-bottom: 18px;
+}
+
+/* ---------- BUTTONS ---------- */
+
+.service-card button {
+    margin-top: 18px;
+
+    background-color: #14213d;
+
+    color: white;
+
+    border: none;
+
+    padding: 11px 18px;
+
+    border-radius: 25px;
+
+    cursor: pointer;
+}
+
+.service-card button:hover {
+    background-color: #0ea5e9;
+}
+
+/* ---------- PROCESS ---------- */
+
+.process-card span {
+    width: 45px;
+    height: 45px;
+
+    background: #14213d;
+
+    color: white;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    border-radius: 50%;
+
+    margin-bottom: 16px;
+
+    font-weight: bold;
+}
+
+/* ---------- FAQ ---------- */
+
+.faq-box {
+    margin-bottom: 20px;
+}
+
+/* ---------- HIDDEN ---------- */
+
+.hidden {
+    display: none;
+
+    margin-top: 15px;
+
+    background-color: #eff6ff;
+
+    padding: 14px;
+
+    border-radius: 10px;
+}
+
+/* ---------- CONTACT ---------- */
+
+.contact-section {
+    background-color: #dbeafe;
+}
+
+.contact-container {
+    display: grid;
+
+    grid-template-columns: repeat(4, 1fr);
+
+    gap: 25px;
+}
+
+.contact-card {
+    text-align: center;
+}
+
+/* ---------- FORM ---------- */
+
+form {
+    max-width: 700px;
+
+    margin: auto;
+
+    background: white;
+
+    padding: 40px;
+
+    border-radius: 20px;
+
+    border: 1px solid #dbeafe;
+
+    box-shadow: 0 5px 20px rgba(0,0,0,0.08);
+}
+
+label {
+    display: block;
+
+    margin-top: 18px;
+    margin-bottom: 6px;
+
+    font-weight: bold;
+
+    color: #14213d;
+}
+
+input,
+select,
+textarea {
+    width: 100%;
+
+    padding: 14px;
+
+    border-radius: 8px;
+
+    border: 1px solid #cbd5e1;
+
+    font-size: 15px;
+
+    outline: none;
+}
+
+input:focus,
+select:focus,
+textarea:focus {
+    border-color: #0ea5e9;
+}
+
+textarea {
+    min-height: 130px;
+}
+
+#formMessage {
+    margin-top: 18px;
+
+    font-weight: bold;
+}
+
+/* ---------- REVIEWS ---------- */
+
+.stars {
+    color: #0ea5e9;
+
+    font-weight: bold;
+
+    margin-bottom: 12px;
+}
+
+/* ---------- FOOTER ---------- */
+
+.main-footer {
+    background-color: #14213d;
+
+    color: white;
+
+    padding: 55px 7%;
+
+    display: grid;
+
+    grid-template-columns: 1.3fr 1fr 1fr 1.2fr;
+
+    gap: 40px;
+}
+
+.footer-brand img {
+    width: 210px;
+
+    background: white;
+
+    padding: 8px;
+
+    border-radius: 10px;
+
+    margin-bottom: 18px;
+}
+
+.footer-column h3 {
+    margin-bottom: 18px;
+
+    font-size: 24px;
+}
+
+.footer-column a,
+.footer-column p {
+    display: block;
+
+    color: #38bdf8;
+
+    text-decoration: none;
+
+    margin-bottom: 12px;
+}
+
+.footer-column strong {
+    color: white;
+}
+
+/* ---------- MOBILE ---------- */
+
+@media screen and (max-width: 768px) {
+
+    header {
+        padding: 15px 20px;
+
+        flex-wrap: wrap;
+    }
+
+    .logo img {
+        height: 60px;
+    }
+
+    .menu-btn {
+        display: block;
+    }
+
+    nav {
+        display: none;
+
+        width: 100%;
+
+        background: #1e3a5f;
+
+        padding: 15px;
+
+        border-radius: 10px;
+
+        margin-top: 15px;
+    }
+
+    nav.show {
+        display: block;
+    }
+
+    nav a {
+        display: block;
+
+        margin: 12px 0;
+    }
+
+    .hero {
+        min-height: 520px;
+
+        padding: 50px 20px;
+
+        text-align: center;
+    }
+
+    .hero h1 {
+        font-size: 40px;
+    }
+
+    .hero p {
+        font-size: 16px;
+    }
+
+    .about,
+    .features,
+    .trust-section,
+    .faq-section,
+    .extra-services,
+    .service-info,
+    .form-section,
+    .page-title,
+    .client-section,
+    .contact-section,
+    .reviews-section {
+        padding: 50px 20px;
+    }
+
+    .about-container {
+        flex-direction: column;
+    }
+
+    .about-container img {
+        width: 100%;
+
+        height: 260px;
+    }
+
+    .feature-grid,
+    .service-grid,
+    .process-grid,
+    .info-container,
+    .client-grid,
+    .contact-container,
+    .review-grid,
+    .main-footer {
+        grid-template-columns: 1fr;
+    }
+}
